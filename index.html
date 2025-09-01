@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper – Landing</title>
+  <link rel="stylesheet" href="./styles/landing.css">
+</head>
+<body>
+  <div class="landing-container">
+    <h1 class="title">💣 Minesweeper</h1>
+
+    <div class="level-select">
+      <h2>Select Difficulty</h2>
+      <div class="buttons">
+        <button data-level="beginner">Beginner (9×9, 10 mines)</button>
+        <button data-level="intermediate">Intermediate (16×16, 40 mines)</button>
+        <button data-level="expert">Expert (30×16, 99 mines)</button>
+      </div>
+    </div>
+
+    <button id="playButton" class="play-btn">▶ Play Game</button>
+  </div>
+
+  <script>
+    let chosenLevel = "beginner"; // default
+
+    document.querySelectorAll(".level-select button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".level-select button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        chosenLevel = btn.dataset.level;
+      });
+    });
+
+    document.getElementById("playButton").addEventListener("click", () => {
+      // Save choice in localStorage so game.js can read it
+      localStorage.setItem("minesweeper-level", chosenLevel);
+      window.location.href = "game.html";
+    });
+  </script>
+</body>
+</html>

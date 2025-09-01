@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+
+  /* Same background as game */
+  background: url("../images/back.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
+
+.landing-container {
+  text-align: center;
+  background: rgba(20, 20, 20, 0.55);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.9);
+  backdrop-filter: blur(4px);
+}
+
+.title {
+  font-size: 40px;
+  color: #0f0;
+  text-shadow: 0 0 12px #00ff66;
+  margin-bottom: 20px;
+}
+
+.level-select h2 {
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.level-select button {
+  background: #111;
+  border: 2px solid #0f0;
+  color: #0f0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #00ff66;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.level-select button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #00ff66;
+}
+
+.level-select button.active {
+  background: #0f0;
+  color: #000;
+  text-shadow: none;
+  box-shadow: 0 0 14px #00ff66;
+}
+
+.play-btn {
+  margin-top: 15px;
+  background: #0f0;
+  color: #000;
+  border: none;
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 16px #00ff66;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ff66;
+}
