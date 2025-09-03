@@ -305,19 +305,23 @@ body::before {
 
 /* Victory mines (⭐ stars instead of flowers) */
 .cell.victory-mine {
-  background: #1b3a1b;
-  font-size: 22px;
+  background: radial-gradient(circle, #fff9c4 20%, #ffd700 60%, #b8860b 100%);
+  border: 1px solid #ffec8b;
+  font-size: 26px;
   text-align: center;
+  box-shadow: 0 0 12px #ffd700, inset 0 0 10px rgba(255, 215, 0, 0.6);
   animation: starGlow 1.5s infinite alternate;
+  border-radius: 6px;
 }
 .cell.victory-mine::after {
   content: "⭐";
 }
 
 @keyframes starGlow {
-  from { color: #ffd700; text-shadow: 0 0 6px #ffdd33; }
-  to   { color: #fff176; text-shadow: 0 0 12px #ffff66; }
+  from { color: #ffd700; text-shadow: 0 0 8px #ffdd33, 0 0 16px #ffaa00; }
+  to   { color: #fffacd; text-shadow: 0 0 14px #ffff66, 0 0 22px #ffd700; }
 }
+
 
 /* Victory cell colors */
 .cell.revealed.victory-cell {
