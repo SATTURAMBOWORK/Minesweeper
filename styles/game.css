@@ -298,9 +298,10 @@ body::before {
   100% { background-color: rgba(0, 0, 0, 0.6); }
 }
 
-body.celebration::before {
+.board.celebration {
   animation: celebrationGlow 3s ease-in-out infinite;
 }
+
 
 /* Victory mines (⭐ stars instead of flowers) */
 .cell.victory-mine {

@@ -180,18 +180,21 @@ function revealCell(index) {
   stopTimer();
 
   // Celebration background
-  document.body.classList.add("celebration");
+// document.body.classList.add("celebration"); ❌ remove this
+document.querySelector(".board").classList.add("celebration"); // ✅ only grid glows
 
-  // Turn mines into stars
-  cells.forEach(c => {
-    if (c.classList.contains("mine") && !c.classList.contains("exploded")) {
-      c.classList.remove("mine");
-      c.classList.add("victory-mine");
-    }
-    if (c.classList.contains("revealed")) {
-      c.classList.add("victory-cell");
-    }
-  });
+// Turn mines into stars
+cells.forEach(c => {
+  if (c.classList.contains("mine") && !c.classList.contains("exploded")) {
+    c.classList.remove("mine", "flagged"); // remove mine + flag
+    c.textContent = "";                    // clear flag symbol
+    c.classList.add("victory-mine");
+  }
+  if (c.classList.contains("revealed")) {
+    c.classList.add("victory-cell");
+  }
+});
+
 
   document.getElementById("restart").textContent = "😎";
 }
