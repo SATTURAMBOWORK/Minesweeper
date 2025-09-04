@@ -7,6 +7,7 @@ import {
 } from "./gamelogic.js";
 import { startTimer, stopTimer, timer, timerInterval } from "./time.js";
 import { triggerExplosion } from "./explosion.js";
+import { setHighScore,getHighScore,updateHighScoreDisplay } from "./score.js";
 
 document.getElementById("game").addEventListener("contextmenu", e => e.preventDefault());
 
@@ -24,20 +25,7 @@ if (level === "intermediate") {
 
 let totalFlags = mineCount;
 
-// --- High Scores ---
-function getHighScore(level) {
-  return localStorage.getItem("minesweeper-highscore-" + level);
-}
 
-function setHighScore(level, time) {
-  localStorage.setItem("minesweeper-highscore-" + level, time);
-}
-
-function updateHighScoreDisplay() {
-  const el = document.getElementById("highscore");
-  const score = getHighScore(level);
-  el.textContent = score ? score + "s" : "--";
-}
 
 // --- HUD Update: Timer ---
 function updateTimerDisplay() {
@@ -87,14 +75,38 @@ function renderGamePage() {
     renderGamePage();
   });
 
-  // Add first-click listeners
-  document.querySelectorAll(".cell").forEach(cell => {
-    cell.addEventListener("click", firstClickHandler);
-    cell.addEventListener("contextmenu", e => {
-      e.preventDefault();
-      toggleFlag(cell);
-    });
+ // Add first-click listeners
+document.querySelectorAll(".cell").forEach(cell => {
+  // Desktop: left click reveal
+  cell.addEventListener("click", firstClickHandler);
+
+  // Desktop: right click flag
+  cell.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    toggleFlag(cell);
   });
+
+  // Mobile: touch support
+  let touchTimer;
+  cell.addEventListener("touchstart", e => {
+    e.preventDefault(); // prevent scrolling
+    touchTimer = setTimeout(() => {
+      toggleFlag(cell); // long press = flag
+      touchTimer = null;
+    }, 500); // 0.5s hold
+  });
+
+  cell.addEventListener("touchend", e => {
+    e.preventDefault();
+    if (touchTimer) {
+      // Short tap = reveal
+      clearTimeout(touchTimer);
+      touchTimer = null;
+      firstClickHandler({ target: cell });
+    }
+  });
+});
+
 
   updateHighScoreDisplay();
 }

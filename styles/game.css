@@ -336,3 +336,59 @@ body::before {
   from { background: #1d4221; box-shadow: inset 0 0 6px rgba(50, 255, 100, 0.3); }
   to   { background: #267733; box-shadow: inset 0 0 12px rgba(50, 255, 100, 0.7); }
 }
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Medium screens (small laptops, ~1366px wide) */
+@media (max-width: 1400px) {
+  .wrap {
+    transform: scale(0.95);
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+  #left, #right {
+    font-size: 18px;
+    padding: 3px 8px;
+  }
+  #restart {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+}
+
+/* Small screens (tablets or compact laptops ~1024px wide) */
+@media (max-width: 1024px) {
+  .wrap {
+    transform: scale(0.85);
+    max-width: 100vw;
+    max-height: 85vh;
+  }
+  .board-wrapper {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+  #left, #right {
+    font-size: 16px;
+    padding: 2px 6px;
+  }
+  #restart {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+  .cell.revealed {
+    font-size: 16px;
+  }
+}
+
+/* Very small screens (netbooks or large tablets ~768px wide) */
+@media (max-width: 768px) {
+  .wrap {
+    transform: scale(0.75);
+  }
+  .board[data-size="small"] { --size: 32px; }
+  .board[data-size="medium"] { --size: 28px; }
+  .board[data-size="large"] { --size: 22px; }
+}
