@@ -200,7 +200,7 @@ body::before {
     inset 0 0 18px #ff3300;
   animation: lavaFlash 0.5s ease-out forwards;
   overflow: visible;
-  background-image: url("../images/mine.png"); /* custom mine */
+  
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;

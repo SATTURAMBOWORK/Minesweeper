@@ -33,7 +33,6 @@ function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particles.forEach((p, i) => {
     p.update();
-    p.draw(ctx);
     if (p.opacity <= 0) particles.splice(i, 1);
   });
   requestAnimationFrame(animate);
