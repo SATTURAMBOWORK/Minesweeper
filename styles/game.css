@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: url("../images/back.png") no-repeat center center fixed;
+ background: url("images/back.png") no-repeat center center fixed; /* updated path */
   background-size: cover;
 }
 
