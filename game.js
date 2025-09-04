@@ -9,6 +9,8 @@ import { startTimer, stopTimer, timer, timerInterval } from "./time.js";
 import { triggerExplosion } from "./explosion.js";
 import { setHighScore,getHighScore,updateHighScoreDisplay } from "./score.js";
 
+let gameOver = false;
+
 document.getElementById("game").addEventListener("contextmenu", e => e.preventDefault());
 
 // --- Difficulty Settings ---
@@ -69,6 +71,7 @@ function renderGamePage() {
 
   // Restart
   document.getElementById("restart").addEventListener("click", () => {
+    gameOver=false;
     stopTimer();
     totalFlags = mineCount;
     document.getElementById("restart").textContent = "🙂";
@@ -155,6 +158,9 @@ function removeEvents() {
 
 // --- Reveal a cell ---
 function revealCell(index) {
+    
+   if (gameOver) return; // prevent further actions if game ended
+
   const cells = document.querySelectorAll(".cell");
   const cell = cells[index];
 
@@ -167,12 +173,15 @@ function revealCell(index) {
     triggerExplosion(cell);
     playExplosionSound();
 
+      stopTimer();         // stop the timer
+  gameOver = true;     // set gameOver
+
     // 🔥 Add shake effect to game container
     const gameContainer = document.getElementById("game");
     gameContainer.classList.add("shake");
     setTimeout(() => gameContainer.classList.remove("shake"), 400);
 
-    stopTimer();
+    
     cells.forEach(c => {
       if (c.classList.contains("mine")) {
         c.textContent = "💣";
@@ -217,13 +226,7 @@ document.getElementById("restart").textContent = "😵";
     console.log("🎉 WIN detected!");
 document.querySelector(".board").classList.add("celebration");
 
-    // check high score
-    const prev = getHighScore(level);
-    if (!prev || timer < prev) {
-      setHighScore(level, timer);
-      alert("🎉 New High Score: " + timer + "s!");
-    }
-    updateHighScoreDisplay(level);
+    
 
     // Celebration background
     document.querySelector(".board").classList.add("celebration");
@@ -241,11 +244,20 @@ document.querySelector(".board").classList.add("celebration");
     });
 
     document.getElementById("restart").textContent = "😎";
+
+    // check high score
+    const prev = getHighScore(level);
+    if (!prev || timer < prev) {
+      setHighScore(level, timer);
+      alert("🎉 New High Score: " + timer + "s!");
+    }
+    updateHighScoreDisplay(level);
   }
 }
 
 // --- Flags ---
 function toggleFlag(cell) {
+  if (gameOver) return; // 🚫 stop flags after game over
   if (cell.classList.contains("revealed")) return;
   if (cell.classList.contains("flagged")) {
     cell.classList.remove("flagged");
@@ -276,6 +288,7 @@ function toggleFlag(cell) {
 
 // --- Chording ---
 function chordCell(index) {
+  if (gameOver) return; // 🚫 block chording after game over
   const cells = document.querySelectorAll(".cell");
   const cell = cells[index];
   if (!cell.classList.contains("revealed")) return;
