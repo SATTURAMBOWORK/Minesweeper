@@ -24,6 +24,21 @@ if (level === "intermediate") {
 
 let totalFlags = mineCount;
 
+// --- High Scores ---
+function getHighScore(level) {
+  return localStorage.getItem("minesweeper-highscore-" + level);
+}
+
+function setHighScore(level, time) {
+  localStorage.setItem("minesweeper-highscore-" + level, time);
+}
+
+function updateHighScoreDisplay() {
+  const el = document.getElementById("highscore");
+  const score = getHighScore(level);
+  el.textContent = score ? score + "s" : "--";
+}
+
 // --- HUD Update: Timer ---
 function updateTimerDisplay() {
   const timerEl = document.getElementById("timer");
@@ -50,7 +65,9 @@ function renderGamePage() {
       <div class="header">
         <div id="left">⏱ <span id="timer">0</span></div>
         <button id="restart">🙂</button>
-        <div id="right">🚩 <span id="flagCount">${totalFlags}</span></div>
+        <div id="right">
+          🚩 <span id="flagCount">${totalFlags}</span> | 🏆 <span id="highscore">--</span>
+        </div>
       </div>
       <div class="board-wrapper">
         <div class="board" data-size="${sizeAttr}" 
@@ -78,6 +95,8 @@ function renderGamePage() {
       toggleFlag(cell);
     });
   });
+
+  updateHighScoreDisplay();
 }
 
 // --- First click ---
@@ -134,10 +153,11 @@ function revealCell(index) {
     cell.classList.add("exploded");
     triggerExplosion(cell);
     playExplosionSound();
-      // 🔥 Add shake effect to game container
-  const gameContainer = document.getElementById("game");
-  gameContainer.classList.add("shake");
-  setTimeout(() => gameContainer.classList.remove("shake"), 400);
+
+    // 🔥 Add shake effect to game container
+    const gameContainer = document.getElementById("game");
+    gameContainer.classList.add("shake");
+    setTimeout(() => gameContainer.classList.remove("shake"), 400);
 
     stopTimer();
     cells.forEach(c => {
@@ -152,6 +172,8 @@ function revealCell(index) {
         c.classList.add("wrong-flag");
       }
     });
+    // Set game over emoji
+document.getElementById("restart").textContent = "😵";
   } else {
     const num = cell.dataset.number;
     if (num === "0") {
@@ -177,28 +199,33 @@ function revealCell(index) {
     c => c.classList.contains("mine") || c.classList.contains("revealed")
   );
   if (allRevealed) {
-  stopTimer();
+    stopTimer();
 
-  // Celebration background
-// document.body.classList.add("celebration"); ❌ remove this
-document.querySelector(".board").classList.add("celebration"); // ✅ only grid glows
+    // check high score
+    const prev = getHighScore(level);
+    if (!prev || timer < prev) {
+      setHighScore(level, timer);
+      alert("🎉 New High Score: " + timer + "s!");
+    }
+    updateHighScoreDisplay();
 
-// Turn mines into stars
-cells.forEach(c => {
-  if (c.classList.contains("mine") && !c.classList.contains("exploded")) {
-    c.classList.remove("mine", "flagged"); // remove mine + flag
-    c.textContent = "";                    // clear flag symbol
-    c.classList.add("victory-mine");
+    // Celebration background
+    document.querySelector(".board").classList.add("celebration");
+
+    // Turn mines into stars
+    cells.forEach(c => {
+      if (c.classList.contains("mine") && !c.classList.contains("exploded")) {
+        c.classList.remove("mine", "flagged");
+        c.textContent = "";
+        c.classList.add("victory-mine");
+      }
+      if (c.classList.contains("revealed")) {
+        c.classList.add("victory-cell");
+      }
+    });
+
+    document.getElementById("restart").textContent = "😎";
   }
-  if (c.classList.contains("revealed")) {
-    c.classList.add("victory-cell");
-  }
-});
-
-
-  document.getElementById("restart").textContent = "😎";
-}
-
 }
 
 // --- Flags ---
