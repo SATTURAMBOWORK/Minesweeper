@@ -75,7 +75,8 @@ function renderGamePage() {
     renderGamePage();
   });
 
- // Add first-click listeners
+
+// Add first-click listeners
 document.querySelectorAll(".cell").forEach(cell => {
   // Desktop: left click reveal
   cell.addEventListener("click", firstClickHandler);
@@ -108,7 +109,7 @@ document.querySelectorAll(".cell").forEach(cell => {
 });
 
 
-  updateHighScoreDisplay();
+  updateHighScoreDisplay(level);
 }
 
 // --- First click ---
@@ -213,13 +214,16 @@ document.getElementById("restart").textContent = "😵";
   if (allRevealed) {
     stopTimer();
 
+    console.log("🎉 WIN detected!");
+document.querySelector(".board").classList.add("celebration");
+
     // check high score
     const prev = getHighScore(level);
     if (!prev || timer < prev) {
       setHighScore(level, timer);
       alert("🎉 New High Score: " + timer + "s!");
     }
-    updateHighScoreDisplay();
+    updateHighScoreDisplay(level);
 
     // Celebration background
     document.querySelector(".board").classList.add("celebration");

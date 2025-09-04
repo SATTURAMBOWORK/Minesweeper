@@ -7,7 +7,7 @@ export function getHighScore(level) {
   localStorage.setItem("minesweeper-highscore-" + level, time);
 }
 
-export function updateHighScoreDisplay() {
+export function updateHighScoreDisplay(level) {
   const el = document.getElementById("highscore");
   const score = getHighScore(level);
   el.textContent = score ? score + "s" : "--";
