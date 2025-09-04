@@ -7,7 +7,7 @@ import {
 } from "./gamelogic.js";
 import { startTimer, stopTimer, timer, timerInterval } from "./time.js";
 import { triggerExplosion } from "./explosion.js";
-import { setHighScore,getHighScore,updateHighScoreDisplay } from "./score.js";
+import { setHighScore, getHighScore, updateHighScoreDisplay } from "./score.js";
 
 let gameOver = false;
 
@@ -26,8 +26,6 @@ if (level === "intermediate") {
 }
 
 let totalFlags = mineCount;
-
-
 
 // --- HUD Update: Timer ---
 function updateTimerDisplay() {
@@ -71,46 +69,25 @@ function renderGamePage() {
 
   // Restart
   document.getElementById("restart").addEventListener("click", () => {
-    gameOver=false;
+    gameOver = false;
     stopTimer();
     totalFlags = mineCount;
     document.getElementById("restart").textContent = "🙂";
     renderGamePage();
   });
 
+  // Add first-click listeners
+  document.querySelectorAll(".cell").forEach(cell => {
+    // Desktop: left click reveal
+    cell.addEventListener("click", firstClickHandler);
 
-// Add first-click listeners
-document.querySelectorAll(".cell").forEach(cell => {
-  // Desktop: left click reveal
-  cell.addEventListener("click", firstClickHandler);
+    // Desktop: right click flag
+    cell.addEventListener("contextmenu", e => {
+      e.preventDefault();
+      toggleFlag(cell);
+    });
 
-  // Desktop: right click flag
-  cell.addEventListener("contextmenu", e => {
-    e.preventDefault();
-    toggleFlag(cell);
   });
-
-  // Mobile: touch support
-  let touchTimer;
-  cell.addEventListener("touchstart", e => {
-    e.preventDefault(); // prevent scrolling
-    touchTimer = setTimeout(() => {
-      toggleFlag(cell); // long press = flag
-      touchTimer = null;
-    }, 500); // 0.5s hold
-  });
-
-  cell.addEventListener("touchend", e => {
-    e.preventDefault();
-    if (touchTimer) {
-      // Short tap = reveal
-      clearTimeout(touchTimer);
-      touchTimer = null;
-      firstClickHandler({ target: cell });
-    }
-  });
-});
-
 
   updateHighScoreDisplay(level);
 }
@@ -158,8 +135,7 @@ function removeEvents() {
 
 // --- Reveal a cell ---
 function revealCell(index) {
-    
-   if (gameOver) return; // prevent further actions if game ended
+  if (gameOver) return;
 
   const cells = document.querySelectorAll(".cell");
   const cell = cells[index];
@@ -173,15 +149,13 @@ function revealCell(index) {
     triggerExplosion(cell);
     playExplosionSound();
 
-      stopTimer();         // stop the timer
-  gameOver = true;     // set gameOver
+    stopTimer();
+    gameOver = true;
 
-    // 🔥 Add shake effect to game container
     const gameContainer = document.getElementById("game");
     gameContainer.classList.add("shake");
     setTimeout(() => gameContainer.classList.remove("shake"), 400);
 
-    
     cells.forEach(c => {
       if (c.classList.contains("mine")) {
         c.textContent = "💣";
@@ -194,8 +168,8 @@ function revealCell(index) {
         c.classList.add("wrong-flag");
       }
     });
-    // Set game over emoji
-document.getElementById("restart").textContent = "😵";
+
+    document.getElementById("restart").textContent = "😵";
   } else {
     const num = cell.dataset.number;
     if (num === "0") {
@@ -222,17 +196,10 @@ document.getElementById("restart").textContent = "😵";
   );
   if (allRevealed) {
     stopTimer();
-    gameOver=true;
+    gameOver = true;
 
-    console.log("🎉 WIN detected!");
-document.querySelector(".board").classList.add("celebration");
-
-    
-
-    // Celebration background
     document.querySelector(".board").classList.add("celebration");
 
-    // Turn mines into stars
     cells.forEach(c => {
       if (c.classList.contains("mine") && !c.classList.contains("exploded")) {
         c.classList.remove("mine", "flagged");
@@ -246,7 +213,6 @@ document.querySelector(".board").classList.add("celebration");
 
     document.getElementById("restart").textContent = "😎";
 
-    // check high score
     const prev = getHighScore(level);
     if (!prev || timer < prev) {
       setHighScore(level, timer);
@@ -258,8 +224,9 @@ document.querySelector(".board").classList.add("celebration");
 
 // --- Flags ---
 function toggleFlag(cell) {
-  if (gameOver) return; // 🚫 stop flags after game over
+  if (gameOver) return;
   if (cell.classList.contains("revealed")) return;
+
   if (cell.classList.contains("flagged")) {
     cell.classList.remove("flagged");
     cell.textContent = "";
@@ -275,11 +242,9 @@ function toggleFlag(cell) {
   const flagEl = document.getElementById("flagCount");
   flagEl.textContent = totalFlags;
 
-  // Pulse animation
   flagEl.classList.add("digit-update");
   setTimeout(() => flagEl.classList.remove("digit-update"), 250);
 
-  // Critical warning
   if (totalFlags < 0) {
     flagEl.parentElement.classList.add("hud-critical");
   } else {
@@ -289,7 +254,7 @@ function toggleFlag(cell) {
 
 // --- Chording ---
 function chordCell(index) {
-  if (gameOver) return; // 🚫 block chording after game over
+  if (gameOver) return;
   const cells = document.querySelectorAll(".cell");
   const cell = cells[index];
   if (!cell.classList.contains("revealed")) return;
