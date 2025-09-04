@@ -222,6 +222,7 @@ document.getElementById("restart").textContent = "😵";
   );
   if (allRevealed) {
     stopTimer();
+    gameOver=true;
 
     console.log("🎉 WIN detected!");
 document.querySelector(".board").classList.add("celebration");
