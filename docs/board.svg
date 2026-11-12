@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 470" width="740" height="470" font-family="'Fira Code', Consolas, monospace">
+<style>
+.cv{fill:#334155;stroke:#0f172a;stroke-width:2}
+.rv{fill:#1e293b;stroke:#0f172a;stroke-width:2;opacity:0}
+.num{font-size:18px;font-weight:700;opacity:0}
+.flag{opacity:0}
+.t{fill:#e2e8f0;font-size:22px;font-weight:700;font-family:"Segoe UI",Ubuntu,sans-serif}
+.s{fill:#94a3b8;font-size:13px;font-family:"Segoe UI",Ubuntu,sans-serif}
+.k{fill:#f59e0b;font-size:12px;font-weight:700;letter-spacing:2px;font-family:"Segoe UI",Ubuntu,sans-serif}
+@keyframes a0{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a1{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a2{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a3{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a4{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a5{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a6{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a7{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a8{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a9{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a10{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a11{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a12{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a13{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a14{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a15{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a16{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a17{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a18{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a19{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a20{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a21{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a22{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a23{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a24{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a25{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a26{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a27{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a28{0%,7.5%{opacity:0}9.5%,94%{opacity:1}100%{opacity:0}}
+@keyframes a29{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a30{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a31{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a32{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a33{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a34{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a35{0%,11.9%{opacity:0}13.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes a36{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a37{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a38{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a39{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a40{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a41{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a42{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a43{0%,16.2%{opacity:0}18.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes a44{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a45{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a46{0%,33.8%{opacity:0}35.8%,94%{opacity:1}100%{opacity:0}}
+@keyframes a47{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a48{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a49{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a50{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a51{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a52{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a53{0%,20.6%{opacity:0}22.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes a54{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a55{0%,33.8%{opacity:0}35.8%,94%{opacity:1}100%{opacity:0}}
+@keyframes a56{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a57{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a58{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a59{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a60{0%,25.0%{opacity:0}27.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes a61{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes a62{0%,29.4%{opacity:0}31.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes f0{0%,41.9%{opacity:0}43.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes f1{0%,45.0%{opacity:0}47.0%,94%{opacity:1}100%{opacity:0}}
+@keyframes f2{0%,48.1%{opacity:0}50.1%,94%{opacity:1}100%{opacity:0}}
+@keyframes f3{0%,51.2%{opacity:0}53.2%,94%{opacity:1}100%{opacity:0}}
+@keyframes f4{0%,54.4%{opacity:0}56.4%,94%{opacity:1}100%{opacity:0}}
+@keyframes f5{0%,57.5%{opacity:0}59.5%,94%{opacity:1}100%{opacity:0}}
+@keyframes f6{0%,60.6%{opacity:0}62.6%,94%{opacity:1}100%{opacity:0}}
+@keyframes f7{0%,63.7%{opacity:0}65.8%,94%{opacity:1}100%{opacity:0}}
+@keyframes f8{0%,66.9%{opacity:0}68.9%,94%{opacity:1}100%{opacity:0}}
+@keyframes ring{0%{r:4;opacity:1}8%{r:26;opacity:0}100%{r:26;opacity:0}}
+@keyframes show{0%{opacity:0}100%{opacity:1}}
+</style>
+<rect width="740" height="470" rx="14" fill="#0b1120"/>
+<text x="40" y="42" class="k">FLOOD-FILL REVEAL · BFS</text>
+<rect class="cv" x="40" y="70" width="40" height="40" rx="4"/>
+<rect class="rv" x="40" y="70" width="40" height="40" rx="4" style="animation:a0 8.0s infinite"/>
+<rect class="cv" x="80" y="70" width="40" height="40" rx="4"/>
+<rect class="rv" x="80" y="70" width="40" height="40" rx="4" style="animation:a1 8.0s infinite"/>
+<rect class="cv" x="120" y="70" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="70" width="40" height="40" rx="4" style="animation:a2 8.0s infinite"/>
+<rect class="cv" x="160" y="70" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="70" width="40" height="40" rx="4" style="animation:a3 8.0s infinite"/>
+<rect class="cv" x="200" y="70" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="70" width="40" height="40" rx="4" style="animation:a4 8.0s infinite"/>
+<text class="num" x="220.0" y="96.0" text-anchor="middle" fill="#60a5fa" style="animation:a4 8.0s infinite">1</text>
+<rect class="cv" x="240" y="70" width="40" height="40" rx="4"/>
+<rect class="cv" x="280" y="70" width="40" height="40" rx="4"/>
+<rect class="cv" x="320" y="70" width="40" height="40" rx="4"/>
+<rect class="cv" x="360" y="70" width="40" height="40" rx="4"/>
+<rect class="cv" x="40" y="110" width="40" height="40" rx="4"/>
+<rect class="rv" x="40" y="110" width="40" height="40" rx="4" style="animation:a5 8.0s infinite"/>
+<rect class="cv" x="80" y="110" width="40" height="40" rx="4"/>
+<rect class="rv" x="80" y="110" width="40" height="40" rx="4" style="animation:a6 8.0s infinite"/>
+<rect class="cv" x="120" y="110" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="110" width="40" height="40" rx="4" style="animation:a7 8.0s infinite"/>
+<rect class="cv" x="160" y="110" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="110" width="40" height="40" rx="4" style="animation:a8 8.0s infinite"/>
+<rect class="cv" x="200" y="110" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="110" width="40" height="40" rx="4" style="animation:a9 8.0s infinite"/>
+<text class="num" x="220.0" y="136.0" text-anchor="middle" fill="#60a5fa" style="animation:a9 8.0s infinite">1</text>
+<rect class="cv" x="240" y="110" width="40" height="40" rx="4"/>
+<rect class="cv" x="280" y="110" width="40" height="40" rx="4"/>
+<rect class="cv" x="320" y="110" width="40" height="40" rx="4"/>
+<rect class="cv" x="360" y="110" width="40" height="40" rx="4"/>
+<rect class="cv" x="40" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="40" y="150" width="40" height="40" rx="4" style="animation:a10 8.0s infinite"/>
+<text class="num" x="60.0" y="176.0" text-anchor="middle" fill="#4ade80" style="animation:a10 8.0s infinite">2</text>
+<rect class="cv" x="80" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="80" y="150" width="40" height="40" rx="4" style="animation:a11 8.0s infinite"/>
+<text class="num" x="100.0" y="176.0" text-anchor="middle" fill="#4ade80" style="animation:a11 8.0s infinite">2</text>
+<rect class="cv" x="120" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="150" width="40" height="40" rx="4" style="animation:a12 8.0s infinite"/>
+<text class="num" x="140.0" y="176.0" text-anchor="middle" fill="#60a5fa" style="animation:a12 8.0s infinite">1</text>
+<rect class="cv" x="160" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="150" width="40" height="40" rx="4" style="animation:a13 8.0s infinite"/>
+<rect class="cv" x="200" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="150" width="40" height="40" rx="4" style="animation:a14 8.0s infinite"/>
+<text class="num" x="220.0" y="176.0" text-anchor="middle" fill="#60a5fa" style="animation:a14 8.0s infinite">1</text>
+<rect class="cv" x="240" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="150" width="40" height="40" rx="4" style="animation:a15 8.0s infinite"/>
+<text class="num" x="260.0" y="176.0" text-anchor="middle" fill="#4ade80" style="animation:a15 8.0s infinite">2</text>
+<rect class="cv" x="280" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="150" width="40" height="40" rx="4" style="animation:a16 8.0s infinite"/>
+<text class="num" x="300.0" y="176.0" text-anchor="middle" fill="#4ade80" style="animation:a16 8.0s infinite">2</text>
+<rect class="cv" x="320" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="150" width="40" height="40" rx="4" style="animation:a17 8.0s infinite"/>
+<text class="num" x="340.0" y="176.0" text-anchor="middle" fill="#4ade80" style="animation:a17 8.0s infinite">2</text>
+<rect class="cv" x="360" y="150" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="150" width="40" height="40" rx="4" style="animation:a18 8.0s infinite"/>
+<text class="num" x="380.0" y="176.0" text-anchor="middle" fill="#60a5fa" style="animation:a18 8.0s infinite">1</text>
+<rect class="cv" x="40" y="190" width="40" height="40" rx="4"/>
+<rect class="cv" x="80" y="190" width="40" height="40" rx="4"/>
+<rect class="cv" x="120" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="190" width="40" height="40" rx="4" style="animation:a19 8.0s infinite"/>
+<text class="num" x="140.0" y="216.0" text-anchor="middle" fill="#60a5fa" style="animation:a19 8.0s infinite">1</text>
+<rect class="cv" x="160" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="190" width="40" height="40" rx="4" style="animation:a20 8.0s infinite"/>
+<rect class="cv" x="200" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="190" width="40" height="40" rx="4" style="animation:a21 8.0s infinite"/>
+<rect class="cv" x="240" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="190" width="40" height="40" rx="4" style="animation:a22 8.0s infinite"/>
+<rect class="cv" x="280" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="190" width="40" height="40" rx="4" style="animation:a23 8.0s infinite"/>
+<rect class="cv" x="320" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="190" width="40" height="40" rx="4" style="animation:a24 8.0s infinite"/>
+<rect class="cv" x="360" y="190" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="190" width="40" height="40" rx="4" style="animation:a25 8.0s infinite"/>
+<rect class="cv" x="40" y="230" width="40" height="40" rx="4"/>
+<rect class="cv" x="80" y="230" width="40" height="40" rx="4"/>
+<rect class="cv" x="120" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="230" width="40" height="40" rx="4" style="animation:a26 8.0s infinite"/>
+<text class="num" x="140.0" y="256.0" text-anchor="middle" fill="#4ade80" style="animation:a26 8.0s infinite">2</text>
+<rect class="cv" x="160" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="230" width="40" height="40" rx="4" style="animation:a27 8.0s infinite"/>
+<text class="num" x="180.0" y="256.0" text-anchor="middle" fill="#60a5fa" style="animation:a27 8.0s infinite">1</text>
+<rect class="cv" x="200" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="230" width="40" height="40" rx="4" style="animation:a28 8.0s infinite"/>
+<rect class="cv" x="240" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="230" width="40" height="40" rx="4" style="animation:a29 8.0s infinite"/>
+<rect class="cv" x="280" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="230" width="40" height="40" rx="4" style="animation:a30 8.0s infinite"/>
+<rect class="cv" x="320" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="230" width="40" height="40" rx="4" style="animation:a31 8.0s infinite"/>
+<rect class="cv" x="360" y="230" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="230" width="40" height="40" rx="4" style="animation:a32 8.0s infinite"/>
+<rect class="cv" x="40" y="270" width="40" height="40" rx="4"/>
+<rect class="cv" x="80" y="270" width="40" height="40" rx="4"/>
+<rect class="cv" x="120" y="270" width="40" height="40" rx="4"/>
+<rect class="cv" x="160" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="270" width="40" height="40" rx="4" style="animation:a33 8.0s infinite"/>
+<text class="num" x="180.0" y="296.0" text-anchor="middle" fill="#60a5fa" style="animation:a33 8.0s infinite">1</text>
+<rect class="cv" x="200" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="270" width="40" height="40" rx="4" style="animation:a34 8.0s infinite"/>
+<rect class="cv" x="240" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="270" width="40" height="40" rx="4" style="animation:a35 8.0s infinite"/>
+<rect class="cv" x="280" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="270" width="40" height="40" rx="4" style="animation:a36 8.0s infinite"/>
+<rect class="cv" x="320" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="270" width="40" height="40" rx="4" style="animation:a37 8.0s infinite"/>
+<rect class="cv" x="360" y="270" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="270" width="40" height="40" rx="4" style="animation:a38 8.0s infinite"/>
+<rect class="cv" x="40" y="310" width="40" height="40" rx="4"/>
+<rect class="cv" x="80" y="310" width="40" height="40" rx="4"/>
+<rect class="cv" x="120" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="310" width="40" height="40" rx="4" style="animation:a39 8.0s infinite"/>
+<text class="num" x="140.0" y="336.0" text-anchor="middle" fill="#4ade80" style="animation:a39 8.0s infinite">2</text>
+<rect class="cv" x="160" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="310" width="40" height="40" rx="4" style="animation:a40 8.0s infinite"/>
+<text class="num" x="180.0" y="336.0" text-anchor="middle" fill="#60a5fa" style="animation:a40 8.0s infinite">1</text>
+<rect class="cv" x="200" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="310" width="40" height="40" rx="4" style="animation:a41 8.0s infinite"/>
+<rect class="cv" x="240" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="310" width="40" height="40" rx="4" style="animation:a42 8.0s infinite"/>
+<rect class="cv" x="280" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="310" width="40" height="40" rx="4" style="animation:a43 8.0s infinite"/>
+<rect class="cv" x="320" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="310" width="40" height="40" rx="4" style="animation:a44 8.0s infinite"/>
+<rect class="cv" x="360" y="310" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="310" width="40" height="40" rx="4" style="animation:a45 8.0s infinite"/>
+<rect class="cv" x="40" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="40" y="350" width="40" height="40" rx="4" style="animation:a46 8.0s infinite"/>
+<text class="num" x="60.0" y="376.0" text-anchor="middle" fill="#4ade80" style="animation:a46 8.0s infinite">2</text>
+<rect class="cv" x="80" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="80" y="350" width="40" height="40" rx="4" style="animation:a47 8.0s infinite"/>
+<text class="num" x="100.0" y="376.0" text-anchor="middle" fill="#4ade80" style="animation:a47 8.0s infinite">2</text>
+<rect class="cv" x="120" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="350" width="40" height="40" rx="4" style="animation:a48 8.0s infinite"/>
+<text class="num" x="140.0" y="376.0" text-anchor="middle" fill="#60a5fa" style="animation:a48 8.0s infinite">1</text>
+<rect class="cv" x="160" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="350" width="40" height="40" rx="4" style="animation:a49 8.0s infinite"/>
+<rect class="cv" x="200" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="350" width="40" height="40" rx="4" style="animation:a50 8.0s infinite"/>
+<rect class="cv" x="240" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="350" width="40" height="40" rx="4" style="animation:a51 8.0s infinite"/>
+<text class="num" x="260.0" y="376.0" text-anchor="middle" fill="#60a5fa" style="animation:a51 8.0s infinite">1</text>
+<rect class="cv" x="280" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="280" y="350" width="40" height="40" rx="4" style="animation:a52 8.0s infinite"/>
+<text class="num" x="300.0" y="376.0" text-anchor="middle" fill="#60a5fa" style="animation:a52 8.0s infinite">1</text>
+<rect class="cv" x="320" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="350" width="40" height="40" rx="4" style="animation:a53 8.0s infinite"/>
+<text class="num" x="340.0" y="376.0" text-anchor="middle" fill="#60a5fa" style="animation:a53 8.0s infinite">1</text>
+<rect class="cv" x="360" y="350" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="350" width="40" height="40" rx="4" style="animation:a54 8.0s infinite"/>
+<rect class="cv" x="40" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="40" y="390" width="40" height="40" rx="4" style="animation:a55 8.0s infinite"/>
+<rect class="cv" x="80" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="80" y="390" width="40" height="40" rx="4" style="animation:a56 8.0s infinite"/>
+<rect class="cv" x="120" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="120" y="390" width="40" height="40" rx="4" style="animation:a57 8.0s infinite"/>
+<rect class="cv" x="160" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="160" y="390" width="40" height="40" rx="4" style="animation:a58 8.0s infinite"/>
+<rect class="cv" x="200" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="200" y="390" width="40" height="40" rx="4" style="animation:a59 8.0s infinite"/>
+<rect class="cv" x="240" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="240" y="390" width="40" height="40" rx="4" style="animation:a60 8.0s infinite"/>
+<text class="num" x="260.0" y="416.0" text-anchor="middle" fill="#60a5fa" style="animation:a60 8.0s infinite">1</text>
+<rect class="cv" x="280" y="390" width="40" height="40" rx="4"/>
+<rect class="cv" x="320" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="320" y="390" width="40" height="40" rx="4" style="animation:a61 8.0s infinite"/>
+<text class="num" x="340.0" y="416.0" text-anchor="middle" fill="#60a5fa" style="animation:a61 8.0s infinite">1</text>
+<rect class="cv" x="360" y="390" width="40" height="40" rx="4"/>
+<rect class="rv" x="360" y="390" width="40" height="40" rx="4" style="animation:a62 8.0s infinite"/>
+<text x="260.0" y="137.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f0 8.0s infinite">🚩</text>
+<text x="100.0" y="217.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f1 8.0s infinite">🚩</text>
+<text x="100.0" y="337.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f2 8.0s infinite">🚩</text>
+<text x="380.0" y="137.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f3 8.0s infinite">🚩</text>
+<text x="60.0" y="217.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f4 8.0s infinite">🚩</text>
+<text x="300.0" y="417.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f5 8.0s infinite">🚩</text>
+<text x="60.0" y="337.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f6 8.0s infinite">🚩</text>
+<text x="300.0" y="137.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f7 8.0s infinite">🚩</text>
+<text x="140.0" y="297.0" text-anchor="middle" font-size="20" style="opacity:0;animation:f8 8.0s infinite">🚩</text>
+<circle cx="220.0" cy="250.0" r="4" fill="none" stroke="#f59e0b" stroke-width="3" style="animation:ring 8.0s infinite"/>
+<text x="440" y="88" class="t">💣 Minesweeper</text>
+<text x="440" y="114" class="s">Classic game in vanilla JS</text>
+<text x="440" y="168" class="k">BEGINNER</text>
+<text x="440" y="188" class="s">9×9 · 10 mines</text>
+<text x="440" y="228" class="k">INTERMEDIATE</text>
+<text x="440" y="248" class="s">16×16 · 40 mines</text>
+<text x="440" y="288" class="k">EXPERT</text>
+<text x="440" y="308" class="s">30×16 · 99 mines</text>
+<text x="440" y="368" class="s">first click is always safe</text>
+<text x="440" y="390" class="s">chording · flags · high scores</text>
+</svg>
